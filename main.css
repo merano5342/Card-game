@@ -1,0 +1,178 @@
+/* /////// title ////////*/
+
+h2,
+h3,
+p {
+  font-family: 'Nunito', sans-serif;
+}
+
+
+
+#header {
+  /* border: 2px solid; */
+  display: flex;
+  margin: 0 auto;
+
+  flex-direction: column;
+  align-items: flex-end;
+  width: 85%;
+}
+
+#header .title {
+  display: flex;
+  width: 100%;
+  margin-right: 4px;
+  justify-content: flex-end;
+}
+
+#header .title img {
+  padding-top: 10px;
+  max-height: 46px;
+
+}
+
+#header .title h2 {
+  padding-left: 0.5em;
+}
+
+#header .score {
+  margin-right: 4px;
+  margin-bottom: 0;
+  color: #6c90ac;
+}
+
+#header .tried {
+  margin-right: 4px;
+  margin-top: 0;
+}
+
+/* /////// card ////////*/
+
+
+
+/* animated */
+
+.wrong {
+  animation: wrongAnimation 0.2s;
+  animation-iteration-count: 5;
+}
+
+@keyframes wrongAnimation {
+  100% {
+    border: 2px solid #ff5733;
+  }
+}
+
+
+
+/* card */
+
+#cards-table {
+  display: flex;
+  flex-wrap: wrap;
+  width: 85%;
+  margin: 2px auto;
+}
+
+.card {
+  flex: 7% 1 1;
+  /* flex: flex-basis flex-grow flex-shrink
+  flex-basis(佔整體多少比例), 
+  flex-grow(會長大嗎？長的的話會是別人的幾倍？0是不會長大）, 
+  flex-shrink(當容器不夠用的時候，我會不會去收縮自己的大小？） 
+  */
+
+  height: 8vw;
+  /* 8%的視窗大小 */
+  border: 2px solid #e8e8e8;
+  border-radius: 5%;
+
+  margin: 2px;
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.card img {
+  max-width: 30%;
+  align-self: center;
+}
+
+
+.card p {
+  padding-left: 8%;
+  padding-top: 8%;
+  margin: 3px;
+  font-size: 18px;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 700;
+}
+
+.card p:last-child {
+  transform: rotate(180deg);
+}
+
+.card:hover {
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+/* 其他的牌卡狀態 */
+
+.back {
+  background: url('https://assets-lighthouse.alphacamp.co/uploads/image/file/9222/ExportedContentImage_00.png');
+  background-size: cover;
+}
+
+.paired {
+  background-color: #dae0e3;
+  opacity: 0.5;
+}
+
+
+/* ////// */
+
+#lightVer {
+  border: 0px solid;
+  padding: 8px 16px;
+  background-color: #EA5553;
+  color: #fff;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+#lightVer:hover {
+  cursor: pointer;
+  color: #fff;
+  background-color: #ee9e9d;
+  border: 0px solid;
+}
+
+
+/** Game finished **/
+.completed {
+  position: absolute;
+  z-index: 999;
+  top: 33vh;
+
+  background-color: RGBA(232, 246, 254, 0.8);
+  width: 100vw;
+  padding: 50px 0;
+}
+
+.completed>p {
+  font-size: 1.5em;
+  color: #758d9a;
+  text-align: center;
+  margin: 0;
+}
+
+.completed>h3 {
+  font-size: 3em;
+  font-weight: 700;
+  text-align: center;
+  color: black;
+
+}
